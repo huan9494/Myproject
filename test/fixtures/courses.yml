@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  images: MyString
+  starting_date: 2017-03-16
+  ending_date: 2017-03-16
+  limitation: 1
+  student: 1
+
+two:
+  name: MyString
+  images: MyString
+  starting_date: 2017-03-16
+  ending_date: 2017-03-16
+  limitation: 1
+  student: 1

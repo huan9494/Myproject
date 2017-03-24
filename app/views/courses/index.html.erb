@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<div class = "well" id = "course-list-header">
+  <b>COURSES</b>
+  <a href="<%= new_course_path %>" class="btn btn-info" role="button">New course</a>
+</div>
+
+
+<table class = "table table-bordered table-hover table-responsive" id = 'course-list-table'>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Images</th>
+      <th>Starting date</th>
+      <th>Ending date</th>
+      <th>Limitation</th>
+      <th>Students</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @courses.each do |course| %>
+      <tr>
+        <td><%= course.name %></td>
+        <td><%= course.images %></td>
+        <td><%= course.starting_date %></td>
+        <td><%= course.ending_date %></td>
+        <td><%= course.limitation %></td>
+        <td><%= course.student %></td>
+        <td>
+        <span><%= link_to 'S', course %></span> - 
+        <span><%= link_to 'L', lessons_path(:id_of_course => course.id)%></span> - 
+        <span><%= link_to 'E', edit_course_path(course) %></span> - 
+        <span><%= link_to 'D', root_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<div class = "well" id = "course-list-footer">
+    <span>S: show</span>
+    <span>L: lesson</span>
+    <span>E: edit</span>
+    <span>D: delete</span>
+</div>

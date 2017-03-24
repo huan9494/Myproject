@@ -1,0 +1,22 @@
+// Place all the styles related to the admin controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
+body{margin-top:20px;}
+.fa-fw {width: 2em;}
+#course-list-footer{
+	span{
+			margin: 20px;
+
+		}
+}
+table{
+	 thead tr th{text-align: center;}
+	 tbody tr td{text-align: center;}
+}
+#course-list-header{
+	b{
+		font-size: 20px;
+		margin-right: 75%;
+	}
+}
